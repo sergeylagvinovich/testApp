@@ -4,8 +4,16 @@
             <ToastNotification/>
             <b-nav>
                 <b-nav-item active>Главная</b-nav-item>
-                <b-nav-item>Пользователи</b-nav-item>
-                <b-nav-item>Отделы</b-nav-item>
+                    <b-nav-item>
+                        <span>
+                            <router-link to="/users">Пользователи</router-link>
+                        </span>
+                    </b-nav-item>
+                    <b-nav-item>
+                        <span>
+                            <router-link to="/departments">Отделы</router-link>
+                        </span>
+                    </b-nav-item>
             </b-nav>
         </div>
        <router-view></router-view>

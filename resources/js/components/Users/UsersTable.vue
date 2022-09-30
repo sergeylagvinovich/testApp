@@ -23,8 +23,8 @@
                             <td>{{item.wages}}</td>
                             <td>{{item.departments}}</td>
                             <td>
-                                <span class="material-icons-outlined" style="color: #10A581; cursor: pointer;" @click="goTo("EditUser",item.id)">edit</span>
-                                <span class="material-icons-outlined" style="cursor: pointer; color: red">delete</span>
+                                <span class="material-icons-outlined" style="color: #10A581; cursor: pointer;" @click="goTo('EditUser',{id:item.id})">edit</span>
+                                <span class="material-icons-outlined" style="cursor: pointer; color: red" @click="deleteUser(item.id)">delete</span>
                             </td>
                         </tr>
                     </tbody>
@@ -59,6 +59,7 @@ export default {
         },
         ...mapActions({
             'fetch':"UserTableModule/fetch",
+            'deleteUser':"UserEdit/deleteUser"
         }),
         init(){
             this.fetch();
